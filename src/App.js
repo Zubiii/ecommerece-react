@@ -1,29 +1,43 @@
+import "./categories.styles.scss"
 const  App = () => {
   const categories = [
     {
-      name: "Hats"
+      "id": 1,
+      "title": "hats",
+      "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
     },
     {
-      name: "Jackets"
+      "id": 2,
+      "title": "jackets",
+      "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
     },
     {
-      name: "Sneakers"
+      "id": 3,
+      "title": "sneakers",
+      "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
     },
     {
-      name: "Womens"
+      "id": 4,
+      "title": "womens",
+      "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
     },
     {
-      name: "Mens"
+      "id": 5,
+      "title": "mens",
+      "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
     }
   ]
+  
   return (
     <div className="categories-container">
       {
-        categories.map(({name}) => (
-          <div className="category-container">
-            <div className="category-img"></div>
-            <div className="category-body">
-              <h1>{name}</h1>
+        categories.map(({title, id, imageUrl}) => (
+          <div id={id} className="category-container">
+            <div className="background-image" style={{
+              backgroundImage: `url(${imageUrl})`
+            }}/>
+            <div className="category-body-container">
+              <h1>{title.toUpperCase()}</h1>
               <p>Shop Now</p>
             </div>
           </div>
