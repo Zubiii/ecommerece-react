@@ -7,7 +7,7 @@ const CategoryItem = ({title, imageUrl}) => {
               backgroundImage: `url(${imageUrl})`
             }}/>
             <div className="category-body-container">
-              <h1>{title}</h1>
+              <h1>{title.toUpperCase()}</h1>
               <p>Shop Now</p>
             </div>
         </div>
