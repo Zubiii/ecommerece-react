@@ -1,4 +1,3 @@
-import { Outlet } from 'react-router-dom'
 import CategoryItem from '../../components/category/index'
 
 const  Home = () => {
