@@ -35,7 +35,8 @@ provider.setCustomParameters({
 })
 
 export const auth = getAuth()
-export const signinWithGooglePopup = () => signInWithPopup(auth, provider)
+
+export const signinWithGooglePopup = () => signInWithPopup(auth, provider)      // Open popup and show sign-in method with popup
 
 export const FirestoreDB = getFirestore()     // initalize Firestore Databse 
 
